@@ -1,8 +1,77 @@
-%! Author = sbbfti
+%! Author = vanchondo
 %! Date = 10/06/2020
 
 \section{Methodology}
 
+La metodología por utilizar será CRISP-DM.\@
+\begin{enumerate}
+      \item Comprensión del negocio (Business Understanding). \\Los objetivos de este
+            proyecto son:
+            \begin{itemize}
+                  \item Poder reconocer e interpretar las expresiones faciales de un grupo de personas
+                        durante la presentación de un discurso, comercial o producto nuevo.
+                  \item Una vez procesada la información, poder entregar al cliente un
+            \end{itemize}
+
+      \item Comprensión de datos (Data Understanding) Para poder comprender e interpretar
+            la información recolectada, se diseñará un clasificador el cual será entrenado
+            utilizando un data set existente llamado AffectNet\cite[]{8013713}, el cual
+            cuenta con las siguientes clasificaciones:
+            \begin{itemize}
+                  \item Neutral
+                  \item Happy
+                  \item Sad
+                  \item Surprise
+                  \item Fear
+                  \item Disgust
+                  \item Anger
+                  \item Contempt
+                  \item None
+                  \item Uncertain
+                  \item Non-Face
+            \end{itemize}
+
+      \item Preparación de datos (Data Preparation). \\Para preparar los datos se realizan
+            los siguientes pasos:
+            \begin{itemize}
+                  \item La información será capturada con una o mas cámaras las cuales tomaran fotos al
+                        grupo muestra de personas durante la presentación.
+                  \item Se procesan esas fotos para separar las caras detectadas en una foto en
+                        imágenes diferentes.
+                  \item Se aplican técnicas de limpieza sobre la imagen para eliminar la existencia de
+                        ruido.
+            \end{itemize}
+
+      \item Modelado (Modeling) \\Las imágenes se categorizan por lapsos de tiempo, por
+            ejemplo, cada 5 segundos, este tiempo es personalizable, para así poder obtener
+            los cambios de los rostros faciales del publico de una manera promediada y
+            saber mejor el impacto que se esta obteniendo debido a la presentación.
+
+      \item Evaluación (Evaluation) \\Para la evaluación, se van a ejecutar múltiples
+            experimentos con grupos de personas diversos, por ejemplo, un grupo de
+            estudiantes de primaria, secundaria y prepa en donde se les presente el tráiler
+            de una nueva película. Al finalizar, se tiene que hacer una encuesta para
+            obtener información básica sobre que fue lo que sintieron durante la
+            presentación. De esta forma podremos verificar si los resultados obtenidos por
+            el sistema son similares al obtenido de la encuesta. Algo a tener en mente es
+            que para las personas es mas fácil quedarse con el sentimiento de lo ultimo que
+            vieron, entonces si el inicio de la presentación les pareció muy interesante y
+            el final muy aburrido, podríamos llegar a obtener resultados diferentes, dicho
+            esto, se recomienda que para las evaluaciones se utilicen presentaciones de
+            periodos cortos y que no abusen de las emociones del publico.
+
+      \item Implementación (Deployment) \\Para la implementación se planea hacer uso de
+            servicios en la nube para realizar todo el procesamiento de la información. Y
+            el uso de un equipo moderado para la captura de las imágenes tales como cámaras
+            y una computadora para poder subir esta información a nuestro servicio para
+            iniciar el procesamiento.
+\end{enumerate}
+
 \subsection{The subsection also appears in the bookmarks}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+culpa qui officia deserunt mollit anim id est laborum.
